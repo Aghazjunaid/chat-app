@@ -58,6 +58,7 @@ io.on('connection', socket => {
   })
 
   socket.on('typing', function(data){
+    const user = utils.getCurrentUser(socket.id);
     socket.broadcast.to(user.room).emit('typing', data);
   });
 
