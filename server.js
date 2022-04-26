@@ -23,7 +23,7 @@ io.on('connection', socket => {
 
     // send message to client from server(to the single client)
     socket.emit('message',{
-      user : "Jarvis  ",
+      user : "Jarvis",
       msg : 'Welcome to chit-chat',
       time : utils.getNowTime()
     })
@@ -34,7 +34,7 @@ io.on('connection', socket => {
       .emit(
         'message',
         {
-          user : "Jarvis  ",
+          user : "Jarvis",
           msg : `${user.username} has joined the chat`,
           time : utils.getNowTime()
         }
@@ -70,7 +70,7 @@ io.on('connection', socket => {
       io.to(user.room).emit(
         'message',
         {
-          user : "Jarvis  ",
+          user : "Jarvis",
           msg : `${user.username} has left the chat`,
           time : utils.getNowTime()
         }
