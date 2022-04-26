@@ -116,15 +116,43 @@ a {
 	overflow-wrap: break-word;
 }
 
-.chat-messages .message .meta {
+.chat-messages .message1 {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: rgb(157 232 159);
+	border-radius: 5px;
+	overflow-wrap: break-word;
+	text-align: right;
+}
+
+.chat-messages .message2 {
+	padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgb(245 21 27);
+    border-radius: 5px;
+    overflow-wrap: break-word;
+    text-align: center;
+    color: aliceblue;
+	font-weight: bold;
+}
+
+.chat-messages .message .meta, .chat-messages .message1 .meta{
 	font-size: 15px;
 	font-weight: bold;
 	color: var(--dark-color-b);
 	opacity: 0.7;
 	margin-bottom: 7px;
 }
-
-.chat-messages .message .meta span {
+.chat-messages .message2 .meta{
+	font-size: 15px;
+	font-weight: bold;
+	color: #171718;
+	margin-bottom: 7px;
+}
+.chat-messages .message2 .meta span {
+	color: #171718;
+}
+.chat-messages .message .meta span, .chat-messages .message1 .meta span{
 	color: #777;
 }
 

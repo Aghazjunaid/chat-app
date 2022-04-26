@@ -37,13 +37,20 @@ chatForm.addEventListener('submit',(e)=>{
 })
 
 function displayChat(message){
+    console.log("w",message)
     typingMsg.innerHTML = ''
     const div = document.createElement('div');
-    div.classList.add('message');
+    if(message.user == params.username) {
+      div.classList.add('message1');
+    } else if(message.user === "Jarvis"){
+      div.classList.add('message2');
+    } else{
+      div.classList.add('message');
+    }
     const p = document.createElement('p');
     p.classList.add('meta');
     p.innerText = message.user;
-    p.innerHTML += `<span>${message.time}</span>`;
+    p.innerHTML += `<span> ${message.time}</span>`;
     div.appendChild(p);
     const para = document.createElement('p');
     para.classList.add('text');
